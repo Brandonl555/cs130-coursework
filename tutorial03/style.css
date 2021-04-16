@@ -1,0 +1,84 @@
+.container {
+   	display: grid;
+	grid-template-columns: [line1] 3fr [line2] 3fr [line3] 3fr [line4] 1fr;
+    grid-template-rows: 0.5fr 0.5fr 3fr 2fr;
+    grid-template-areas:
+       "menu_left . menu_right menu_right"
+       ". . . ."
+       "x x2 x3 side"
+       "footer footer footer side";
+    height: 100%;
+    grid-row-gap: 30px;
+    grid-column-gap: 30px;
+   	min-height: 100vh;
+}
+
+.menu1 {
+	grid-area: menu_left;
+	background-color: MediumVioletRed;
+	width: 70%;
+}
+
+.menu2 {
+	grid-area: menu_right;
+	background-color: Yellow;
+}
+
+.card1 {
+	grid-area: x;
+	background-color: DodgerBlue;
+}
+
+.card2 {
+	grid-area: x2;
+	background-color: DodgerBlue;
+}
+
+.card3 {
+	grid-area: x3;
+	background-color: DodgerBlue;
+}
+
+.main {
+	grid-area: footer;
+	background-color: DodgerBlue;
+}
+
+.aside {
+	grid-area: side;
+	background-color: Grey;
+}
+
+@media (max-width: 1024px) {
+   .container {
+   	display: grid;
+   	grid-row-gap: 20px;
+    grid-column-gap: 20px;
+   	grid-template-columns: [line1] 1fr [line2] 1fr;
+    grid-template-rows: 0.5fr 0.5fr 3.5fr 2fr 1fr;
+   	grid-template-areas: 
+   		"menu_left menu_right"
+       	"side side"
+       	"x x2"
+       	"x3 x3"
+       	"footer footer";
+   }
+}
+
+@media (max-width: 720) {
+.container {
+   	display: grid;
+   	grid-row-gap: 20px;
+    grid-column-gap: 20px;
+   	grid-template-columns: [line1] 1fr;
+    grid-template-rows: 0.5fr 0.5fr 3.5fr 3.5fr 3.5fr 2fr 1.5fr;
+   	grid-template-areas: 
+   		"menu_left"
+   		"menu_right"
+       	"x"
+       	"x2"
+       	"x3"
+       	"footer"
+       	"side";
+   }
+}
