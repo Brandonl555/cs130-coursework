@@ -1,11 +1,62 @@
 /* You're welcome to change any of this! */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&display=swap');
+
 * {
     box-sizing: border-box;
 }
 
 body {
     margin: 0px;
-    font-family: Arial, sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #36454f ;
+    display: grid;
+    overflow: hidden;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 100px auto; 
+    grid-template-areas:
+    "top top top"  
+    "left middle right";
+    height: 100vh;
+}
+
+top, left, middle, right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid 1px lightseagreen;
+    margin-top: 10px;
+    border-radius: 5px;
+    padding: 10px;
+    color: lightseagreen;
+    
+    
+}
+
+top {
+    grid-area: top;
+}
+
+left {
+    grid-area: left;
+    flex-wrap: wrap;
+    background-color: black;
+}
+
+middle {
+    grid-area: middle;
+    background-color: black;
+    flex-wrap: wrap;
+}
+
+right {
+    grid-area: right;
+    background-color: black;
+    flex-wrap: wrap;
+}
+
+header {
+    font-family: 'Noto Sans KR', sans-serif;
 }
 header, section {
     padding: 20px;
@@ -14,8 +65,18 @@ p, li {
     line-height: 1.5em;
 }
 
-#inspiration {
-    background-color: #F0F0F0;
-    padding-top: 40px;
-    padding-bottom: 40px;
+
+.heading_section {
+    background-color: lightseagreen;
+}
+
+.cards {
+    padding-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 25%;
+    padding: 10px;
 }
