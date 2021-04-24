@@ -9,6 +9,11 @@ body {
     display: grid;
     overflow: hidden;
     margin: 0px;
+    /* 
+    grid-template-columns: ??????;
+    grid-template-rows: ??????;
+    grid-template-areas:  ??????;
+    */
     grid-template-columns: 250px auto;
     grid-template-rows: calc(100vh - 100px) 100px;
     grid-template-areas:  
@@ -26,6 +31,10 @@ aside, footer, nav, header, #featured-content {
     border: solid 1px white;
     padding: 10px;
 
+}
+
+@media screen and (max-width: 700px) {
+    /* Mobile styles go here */
 }
 
 aside {
