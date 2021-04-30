@@ -100,3 +100,12 @@ nav h1 {
         height: 350px;
     }
 }
+@media screen and (max-width: 700px) {
+    .card {
+        width: 100%;
+    }
+    .image-div{
+        height: 450px;
+    }
+}
+}
