@@ -43,10 +43,6 @@ nav h1 {
     line-height: 40px;
 }
 
-img {
-    height: 300px;
-}
-
 .cards {
     padding-top: 100px;
     display: flex;
@@ -102,14 +98,5 @@ img {
     }
     .image-div{
         height: 350px;
-    }
-}
-
-@media screen and (max-width: 700px) {
-    .card {
-        width: 100%;
-    }
-    .image-div{
-        height: 450px;
     }
 }
