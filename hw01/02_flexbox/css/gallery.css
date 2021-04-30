@@ -43,6 +43,9 @@ nav h1 {
     line-height: 40px;
 }
 
+img {
+    height: 300px;
+}
 
 .cards {
     padding-top: 100px;
@@ -109,4 +112,5 @@ nav h1 {
     .image-div{
         height: 450px;
     }
+}
 }
