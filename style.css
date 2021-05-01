@@ -1,3 +1,4 @@
+
 /* You're welcome to change any of this! */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&display=swap');
 * {
@@ -9,8 +10,8 @@ body {
     font-family: 'Noto Sans KR', sans-serif;
     background-color: #36454f ;
     display: grid;
-    overflow: hidden;
-    grid-template-columns: 33% 33% 33%;
+    overflow-y: scroll;
+    grid-template-columns: 1f 1f 1f;
     grid-template-rows: 100px auto; 
     grid-template-areas:
     "top top top"  
@@ -38,7 +39,7 @@ top {
 left {
     grid-area: left;
     flex-wrap: wrap;
-    background-color: black;
+    background-color: rgb(0, 0, 0);
 }
 
 middle {
