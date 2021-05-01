@@ -1,0 +1,271 @@
+body {
+    font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+    color: #fff;
+}
+a, a:hover, a:visited, a:active { 
+    color: #fff;
+    text-decoration: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/**********/
+/* Layout */
+/**********/
+aside, footer, header, nav, section, article {
+    display: flex;
+    flex-direction: column;
+}
+body {
+    overflow: hidden;
+    margin: 0px;
+    display: grid;
+    grid-template-columns: 250px auto;
+    grid-template-rows: auto 100px;
+    grid-template-areas:
+       "left main"
+       "bottom bottom";
+    height: 100vh;
+}
+aside {
+    background-color: #000;
+    grid-area: left;
+}
+header {
+    background: #111;
+    position: fixed;
+    width: calc(100vw - 250px);
+    left: 250px;
+}
+
+main {
+    background: #111;
+    grid-area: main;
+    min-height: calc(350px);
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
+    z-index: 3;
+}
+
+nav {
+    margin-top: 100px;
+}
+
+footer {
+    background: #222;
+    grid-area: bottom;
+}
+
+
+/***************************/
+/* Accessories & Florishes */
+/***************************/
+::-webkit-scrollbar {
+    width: 16px;
+}
+
+::-webkit-scrollbar-thumb {
+    border: 4px solid transparent;
+    border-radius: 16px;
+    background-clip: padding-box;
+    min-height: 30px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: hsla(0,0%,100%,.3);
+}
+
+/***************************/
+/* Part A: Left Navigation */
+/***************************/
+
+/* Your Code Here */
+
+aside > h1 {
+    margin-bottom: 75px;
+}
+
+aside > h1:hover, h1:active {
+    border-left: 6px solid green;
+    height: 200px;
+    position:absolute;
+    left: 50%;
+}
+
+aside > a {
+    padding-left: 5px;
+    margin: 5%;
+}
+
+aside > a:hover, a:active {
+    border-left: 3px solid green;
+    height: 20px;
+    position:flex;
+}
+
+aside > a > i{
+    padding-right: 10px;
+}
+
+
+
+/********************************/
+/* Part B: Header & Nav Styling */
+/********************************/
+
+/* Your Code Here */
+
+.caption {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+main > header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+main > header > a{
+    margin-left: 75px;
+    margin-right: 100px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    width: 150px;
+    height: 35px;
+}
+
+main > header > a > div {
+    margin-top:5px;
+    justify-content: center;
+}
+
+.caption {
+    padding-top:5px;
+    justify-content: center;
+    flex-direction: row;
+}
+main > header > a > i {
+    height: 100px;
+}
+
+main > header > a > i > div {
+    width: 150px;
+    justify-content: center;
+}
+
+#upgrade {
+    color: grey;
+    border-style: solid;
+    border-radius: 20px;
+    border-color: grey;
+    border-width: 1px;
+}
+
+#profile {
+    color: lightgrey;
+    background-color: rgb(53, 53, 53);
+    border-radius: 20px;
+    border-color: rgb(53, 53, 53);
+    border-style: solid;
+    flex-direction: row;
+}
+
+main > nav {
+    flex-direction: row;
+    margin-top: 200px;
+}
+
+main > nav > a {
+    padding-right: 75px;
+    padding-left: 50px;
+    font-size: larger;
+}
+
+main > nav > a:hover, a:active {
+    text-decoration: underline;
+    text-decoration-color: rgb(0, 66, 0);
+}
+
+
+
+
+
+/*************************/
+/* Part C: Artists Panel */
+/*************************/
+
+/* Your Code Here */
+#featured-content {
+    margin-top: 0px;
+}
+
+article {
+    padding-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.artist-card:hover {
+    color: #fff;
+    background-color: rgb(66, 70, 69);
+}
+.artist-card {  
+    background-color: rgb(31, 35, 39);
+    border: solid 1px rgb(39, 37, 37);
+    border-radius: 5px;
+    width: 18%;
+    height: 20%;
+    margin: 5px;
+}
+.artist-card > div > h3, p{
+    padding: 5%;
+    margin-left:30px;
+    
+}
+
+.artist-card > div > span {
+    display: none;
+    margin-left: 150px;
+    margin-top: 1000px;
+}
+.artist-card > div > img {
+    margin-left: 25px;
+    margin-top: 5px;
+    margin-right: auto;
+    width: 75%;
+    border-radius: 250px;
+}
+
+
+
+
+/**************************/
+/* Part D: Responsive UIs */
+/**************************/
+
+/* Your Code Here */
+@media screen and (max-width: 1200px) {
+    .artist-card {
+        width: 30%;
+    }
+    main > nav > a {
+        padding-right: 25px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .artist-card {
+        width: 46%;
+    }
+    main > nav > a {
+        padding-right: 5px;
+    }
+    body > aside {
+        display: none;
+        width: 0%;
+    }
+}
+
+
