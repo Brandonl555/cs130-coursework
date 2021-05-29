@@ -12,9 +12,11 @@ class AuthClient():
     auth = None
     twit_api = None
     me = None
+    user = None
 
-    def __init__(self):
+    def __init__(self, user_id):
         self.auth = tweepy.OAuthHandler(self.consumerKey, self.consumerSecret, self.callback_uri)
+        self.user = user_id
         try:
             self.redirect_url = self.auth.get_authorization_url()
             print(self.redirect_url)
@@ -30,13 +32,13 @@ class AuthClient():
         self.me = self.twit_api.me()
         print(self.me.screen_name)
 
-    def getUser(self, user_id):
-        profile = self.twit_api.lookup_users(screen_name = self.me.screen_name, user_id = ['user_id'])
+    def getUser(self):
+        profile = self.twit_api.lookup_users(screen_name = self.me.screen_name, user_id = [f'{self.user}'])
         print(profile)       
 
 
 ###
 ### TEST
 ###
-a = AuthClient()
-a.getUser('Brandonl5551')
+a = AuthClient('Brandonl5551')
+a.getUser()
