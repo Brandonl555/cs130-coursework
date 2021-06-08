@@ -30,16 +30,12 @@ class AuthClient():
 
         self.twit_api = tweepy.API(self.auth)
         self.me = self.twit_api.me()
-        print(self.me.screen_name)
+        ##print(self.me.screen_name)
 
-    def getUser(self):
-        profile = self.twit_api.lookup_users(screen_name = self.me.screen_name, user_id = [f'{self.user}'])
-        print(profile)
-        return profile
 
 
 ###
 ### TEST
 ###
 #a = AuthClient('Brandonl5551')
-#a.getUser()
+

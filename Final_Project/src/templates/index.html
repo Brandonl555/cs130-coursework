@@ -1,14 +1,56 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="stylesheet" type="text/css" href=" {{ url_for('static', filename='style.css') }}">
-  </head>
-  <body>
-    <form id="form"> 
-        <input type="search" id="query" name="q" placeholder="Search...">
-        <input type="button" id='script' name="scriptbutton" value=" Search profiles... ">
-    </form>
+<head>
+  <title>Flask app</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<div class="wrap">
+  <div>
+    <h1>Welcome to the Tweet Display App...search profiles below</h1>
+  </div>
+  <div class="search">
+     <input name = 'search_profiles' type="text" class="searchTerm" placeholder="Search Profiles... ">
 
-    <h1>TESTTESTESTEST</h1>
-  </body>
+    <input type="submit" class="searchButton">
+      <!-- <i class="fa fa-search"></i>-->
+     
+    <!--
+ <a href="{{ url_for('profiles', profile_name='')}}"">
+      <button type="submit" class="searchButton">
+        <i class="fa fa-search"></i>
+     </button>
+     </a>
+    -->
+     
+  </div>
+</div>
+  <script>
+    /*
+    $('.search-button').click(function(){
+      $(this).parent().toggleClass('open');
+    });*/
+    /*
+    function myFunction() {
+        var element = document.getElementById("searchButton");
+        console.log(element);
+        if (element.classList) { 
+          console.log("hit1");
+          element.classList.toggle("open");
+        } else {
+          console.log("hit");
+          var classes = element.className.split(" ");
+          var i = classes.indexOf("open");
+
+          if (i >= 0) 
+            classes.splice(i, 1);
+          else 
+            classes.push("open");
+            element.className = classes.join(" "); 
+        }
+    }
+    */
+  </script>
+  
+
 </html>
